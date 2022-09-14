@@ -5,20 +5,20 @@
 class S3s < Formula
   desc "Easy S3 select like searching in directories"
   homepage "https://github.com/koluku/s3s"
-  version "0.2.2"
+  version "0.3.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/koluku/s3s/releases/download/v0.2.2/s3s_0.2.2_darwin_amd64.tar.gz"
-      sha256 "0f92c29ab799bc8dfb385a30644b8488450421d6e75ff8134bf3cbf3ff00579e"
+      url "https://github.com/koluku/s3s/releases/download/v0.3.0/s3s_0.3.0_darwin_amd64.tar.gz"
+      sha256 "3628239d2fdce96c0bb8456958a7967fe70b909bf15a1382a50dc42eb5f0ae29"
 
       def install
         bin.install "s3s"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/koluku/s3s/releases/download/v0.2.2/s3s_0.2.2_darwin_arm64.tar.gz"
-      sha256 "419c28b2f96ff97a9e6a3e7b66cea35e8af9285fc212482236cbdbc3a8c6f06c"
+      url "https://github.com/koluku/s3s/releases/download/v0.3.0/s3s_0.3.0_darwin_arm64.tar.gz"
+      sha256 "32f88afb7e36c7da41372362f3b53f6743f18cb97852738d92d556cfbfda8ec1"
 
       def install
         bin.install "s3s"
@@ -28,16 +28,16 @@ class S3s < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/koluku/s3s/releases/download/v0.2.2/s3s_0.2.2_linux_arm64.tar.gz"
-      sha256 "7adb615e5f640a332f8a54c7413c82a461d8dd9ed5493452c92baf95d040b49a"
+      url "https://github.com/koluku/s3s/releases/download/v0.3.0/s3s_0.3.0_linux_arm64.tar.gz"
+      sha256 "4ce5d03b0477a45b53a526a1c8ec134fe96a7579f1a4dd2743773d6f2aed0484"
 
       def install
         bin.install "s3s"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/koluku/s3s/releases/download/v0.2.2/s3s_0.2.2_linux_amd64.tar.gz"
-      sha256 "6a2f5346d05cd8b51deb79de34ad3ab9e134d2b4836eccc7c1336268451c26df"
+      url "https://github.com/koluku/s3s/releases/download/v0.3.0/s3s_0.3.0_linux_amd64.tar.gz"
+      sha256 "c5d0e18643054cb133796e0a6e49c603b0cce7b4f466a0b026340eae1b0054cf"
 
       def install
         bin.install "s3s"
