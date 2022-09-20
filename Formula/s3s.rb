@@ -8,17 +8,17 @@ class S3s < Formula
   version "0.3.3"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/koluku/s3s/releases/download/v0.3.3/s3s_0.3.3_darwin_arm64.tar.gz"
-      sha256 "c943b2d009245a8ce2d14c06afdad6b486c71a9632cc4b3e23450b717a318855"
+    if Hardware::CPU.intel?
+      url "https://github.com/koluku/s3s/releases/download/v0.3.3/s3s_0.3.3_darwin_amd64.tar.gz"
+      sha256 "1ae56cfeb1a5d666dbe0603aabca37d724c04e875cc24de9046ff33b3b7a30cd"
 
       def install
         bin.install "s3s"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/koluku/s3s/releases/download/v0.3.3/s3s_0.3.3_darwin_amd64.tar.gz"
-      sha256 "fad8caf1e52495242c7a4c39c82300c13bfe6fc1db9b454ec0e4213e24b9d070"
+    if Hardware::CPU.arm?
+      url "https://github.com/koluku/s3s/releases/download/v0.3.3/s3s_0.3.3_darwin_arm64.tar.gz"
+      sha256 "551a33892de4000913d389ae92ce933ac85877cab09cc8b3f632b96c812ff00f"
 
       def install
         bin.install "s3s"
@@ -29,7 +29,7 @@ class S3s < Formula
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/koluku/s3s/releases/download/v0.3.3/s3s_0.3.3_linux_arm64.tar.gz"
-      sha256 "f4ce87e1b2a6d21e4d3344f9e14667f9ac1c90e44194bfe0f5617992438da794"
+      sha256 "02ae5d328f721472252732bd5c4bc33c3a45218997ef16a43ee9ae4013163ff5"
 
       def install
         bin.install "s3s"
@@ -37,7 +37,7 @@ class S3s < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/koluku/s3s/releases/download/v0.3.3/s3s_0.3.3_linux_amd64.tar.gz"
-      sha256 "79623c508d60cc314ceb9e30f2362610fab84c0b4a2aa464305bdb9dc9f7cc25"
+      sha256 "50bd10a31a20a4cfa1f357a399bffa24df4332eac0492ed213b8e1ff07f2850b"
 
       def install
         bin.install "s3s"
