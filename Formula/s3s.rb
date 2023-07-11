@@ -5,20 +5,20 @@
 class S3s < Formula
   desc "Easy S3 select like searching in directories"
   homepage "https://github.com/koluku/s3s"
-  version "0.4.3"
+  version "0.5.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/koluku/s3s/releases/download/v0.4.3/s3s_0.4.3_darwin_arm64.tar.gz"
-      sha256 "8a8de4b7063dc6de5c304c42e1a733b815726554845c1df2d3b1fc8a6a8717ec"
+      url "https://github.com/koluku/s3s/releases/download/v0.5.0/s3s_0.5.0_darwin_arm64.tar.gz"
+      sha256 "adb3efde644bff203d760908d3288fe207676dc368876daa149327a8355ac578"
 
       def install
         bin.install "s3s"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/koluku/s3s/releases/download/v0.4.3/s3s_0.4.3_darwin_amd64.tar.gz"
-      sha256 "8a4428f71b502222b5230f60867b50797aca10dbff455f182654eb13a54f0cb6"
+      url "https://github.com/koluku/s3s/releases/download/v0.5.0/s3s_0.5.0_darwin_amd64.tar.gz"
+      sha256 "763a3db879f7ea59e57eb0142811aaf8a32d616f0d09611c69e1ec99a4e42af7"
 
       def install
         bin.install "s3s"
@@ -27,17 +27,17 @@ class S3s < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/koluku/s3s/releases/download/v0.4.3/s3s_0.4.3_linux_arm64.tar.gz"
-      sha256 "5bb014b12b49a49dd369794d4265c89aef9e078fef35d357be0f600200c1aa8a"
+    if Hardware::CPU.intel?
+      url "https://github.com/koluku/s3s/releases/download/v0.5.0/s3s_0.5.0_linux_amd64.tar.gz"
+      sha256 "cf63f207d37d0e6a9093c868e695eadb61ad072fd909014ad5d1a8d6dcc63813"
 
       def install
         bin.install "s3s"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/koluku/s3s/releases/download/v0.4.3/s3s_0.4.3_linux_amd64.tar.gz"
-      sha256 "d7fda980b21a7d5fd254bb99ddd361d942d4f05f6f2dc6ec4f073d37c089e348"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/koluku/s3s/releases/download/v0.5.0/s3s_0.5.0_linux_arm64.tar.gz"
+      sha256 "5a24c521124b27527abbf194ee31c241ea5fac5cc182c0a13793b7f3c56fe960"
 
       def install
         bin.install "s3s"
