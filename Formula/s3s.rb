@@ -5,20 +5,20 @@
 class S3s < Formula
   desc "Easy S3 select like searching in directories"
   homepage "https://github.com/koluku/s3s"
-  version "0.5.2"
+  version "0.5.3"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/koluku/s3s/releases/download/v0.5.2/s3s_0.5.2_darwin_arm64.tar.gz"
-      sha256 "e26f0112e54604b43c046fa924037c2a00947c83f419b8b48227204825c29de6"
+    if Hardware::CPU.intel?
+      url "https://github.com/koluku/s3s/releases/download/v0.5.3/s3s_0.5.3_darwin_amd64.tar.gz"
+      sha256 "fb0cd64edb4e65b9910f6f798a62e5e66807fe1cd79095ed1129f064877bbab1"
 
       def install
         bin.install "s3s"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/koluku/s3s/releases/download/v0.5.2/s3s_0.5.2_darwin_amd64.tar.gz"
-      sha256 "4be28cdc2dabab40edfb8204be42446064f4652e91249bbe63bf9e4445bded3b"
+    if Hardware::CPU.arm?
+      url "https://github.com/koluku/s3s/releases/download/v0.5.3/s3s_0.5.3_darwin_arm64.tar.gz"
+      sha256 "b5ea40e6fe8ba711bcc14b3159c3ceb0cabf9bd177d1f327aa5b6bb80f7aa83b"
 
       def install
         bin.install "s3s"
@@ -27,17 +27,17 @@ class S3s < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/koluku/s3s/releases/download/v0.5.2/s3s_0.5.2_linux_arm64.tar.gz"
-      sha256 "d8dc100d3bba7fb88f20c0497da95facf057f183d955ba4e8523c1276d0fd49a"
+    if Hardware::CPU.intel?
+      url "https://github.com/koluku/s3s/releases/download/v0.5.3/s3s_0.5.3_linux_amd64.tar.gz"
+      sha256 "d2a8cde73d8322fb32828207cf1781de0751e54837675ace403b29f8a472685f"
 
       def install
         bin.install "s3s"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/koluku/s3s/releases/download/v0.5.2/s3s_0.5.2_linux_amd64.tar.gz"
-      sha256 "26f30464a4e3c502de132b5cabca965ba0319b03e9ba0a198ed675c9f91fbb97"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/koluku/s3s/releases/download/v0.5.3/s3s_0.5.3_linux_arm64.tar.gz"
+      sha256 "03daf018f171e8ed9e8a6eb14cd8d1a4a87ab3ec41bac50c0f3964db35613450"
 
       def install
         bin.install "s3s"
